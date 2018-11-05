@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BellaSalon", "BellaSalon\BellaSalon.csproj", "{243C5EAF-B5B8-4281-84A2-7944CC5828C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BellaTests", "BellaTest\BellaTests.csproj", "{395E0E9A-00AC-4298-9F26-0F85C583ACB5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{243C5EAF-B5B8-4281-84A2-7944CC5828C8} = {243C5EAF-B5B8-4281-84A2-7944CC5828C8}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{243C5EAF-B5B8-4281-84A2-7944CC5828C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243C5EAF-B5B8-4281-84A2-7944CC5828C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243C5EAF-B5B8-4281-84A2-7944CC5828C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243C5EAF-B5B8-4281-84A2-7944CC5828C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{395E0E9A-00AC-4298-9F26-0F85C583ACB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{395E0E9A-00AC-4298-9F26-0F85C583ACB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{395E0E9A-00AC-4298-9F26-0F85C583ACB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{395E0E9A-00AC-4298-9F26-0F85C583ACB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7218F4B5-D7CF-41B7-9DDA-C41C79CE11C7}
+	EndGlobalSection
+EndGlobal

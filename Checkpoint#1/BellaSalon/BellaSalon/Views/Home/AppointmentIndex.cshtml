@@ -1,0 +1,67 @@
+﻿@model IEnumerable<BellaSalon.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Appointments";
+}
+
+<h2 style="font-family: 'Brush Script MT'; font-size: xx-large; color: darkgreen">Appointments</h2>
+<style>
+
+    html {
+        background-image: url('/images/spa2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50%;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+</style>
+
+<p>
+    <a asp-action="AppointmentCreate">Create New</a>
+</p>
+<p class="text-danger">@ViewBag.error</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceProvider)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceProvider)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "AppointmentDelete", new { ID = item.ID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
