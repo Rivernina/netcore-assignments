@@ -14,6 +14,7 @@ namespace Lesson00.Views.One
             {
                 result = result + singleModel.Character;
             }
+
             Console.WriteLine(result);
             Console.ReadLine();
         }
