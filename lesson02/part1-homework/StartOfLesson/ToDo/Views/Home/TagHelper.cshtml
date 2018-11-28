@@ -1,0 +1,18 @@
+﻿@model Todo.Models.Repository
+@{
+    ViewData["Title"] = "Tag";
+}
+<h4>@ViewData["Message"]</h4>
+<h2>Tag</h2>
+<form asp-action="/action_page.php" disable-autocomplete>
+    <div class="form-group">
+        First name: <input type="text" name="fname" autocomplete="off"><br>
+    </div>
+    <div class="form-group">
+        Last name: <input type="text" name="lname" autocomplete="off"><br>
+    </div>
+    <div class="form-group">
+        E-mail: &nbsp &nbsp &nbsp <input type="email" name="email" autocomplete="off"><br>
+    </div>
+    <input type="submit">
+</form>
