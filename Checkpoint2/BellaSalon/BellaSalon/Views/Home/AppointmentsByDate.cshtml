@@ -1,0 +1,75 @@
+﻿@model IEnumerable<BellaSalon.Models.Appointment>
+
+@{
+    ViewData["Title"] = "AppointmentsByDate";
+}
+
+<h2 style="font-family: 'Brush Script MT'; font-size: xx-large; color: darkblue">Appointments By Date for @ViewBag.ServiceProviderName</h2>
+<style>
+
+    html {
+        background-image: url('/images/spa9.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50%;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+</style>
+
+<p>
+    <a asp-action="AppointmentCreate">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Date/Customer
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @{ string date = ""; }
+        @foreach (Appointment appointment in ViewBag.SPAppointments)
+        {
+            if (appointment.Date != date)
+            {
+                <tr>
+                    <td>
+                        <h3>@appointment.Date</h3>
+                    </td>
+                </tr>
+            }
+            @foreach (Customer customer in ViewBag.Customers)
+            {
+                if (customer.ID == appointment.CustomerId)
+                {
+                    appointment.Customer.Name = customer.Name;
+          
+                }
+            }
+                <tr>
+                    <td>
+                        <p>@appointment.Customer.Name</p>
+                    </td>
+                    <td>
+                        <p>@appointment.Time</p>
+                    </td>
+                </tr>
+            date = appointment.Date;
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="ServiceProviderIndex">Back to List</a>
+</div>
+
